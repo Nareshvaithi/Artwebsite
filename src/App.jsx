@@ -5,9 +5,8 @@ import Home from "./pages/Home";
 import Layout from "./pages/Layout";
 import { Context } from "./ContextAPI/CreateContext";
 import Rellax from "rellax";
-import Lenis from "lenis";
-import React, { useEffect, useRef } from "react";
-import Admin from "./components/adminPanel/admin";
+import Lenis from 'lenis';
+import React, { useEffect, useRef } from 'react';
 function App() {
   useEffect(() => {
     const rellax = new Rellax(".rellax", {
@@ -41,18 +40,15 @@ function App() {
   }, []);
   return (
     <>
-      <Context>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />
-            
-            </Route>
-
-            <Route path="/admin" element={<Admin></Admin>} />
-          </Routes>
-        </BrowserRouter>
-      </Context>
+    <Context>
+    <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Layout/>}>
+            <Route index element={<Home/>}/>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </Context>
     </>
   );
 }

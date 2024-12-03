@@ -7,49 +7,6 @@ const Home = ()=>{
     return(
         <section>
            <Hero/>
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
-           <br />
         </section>
     )
 }
