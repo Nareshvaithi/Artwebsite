@@ -1,5 +1,7 @@
 import { createContext, useState } from "react";
-
+import {FaWhatsapp,FaFacebookF,FaInstagram} from "react-icons/fa";
+import {GrPinterest} from "react-icons/gr";
+import { useEffect } from "react";
 export const ContextProvide = createContext();
 
 export const Context = ({children})=>{
