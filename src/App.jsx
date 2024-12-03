@@ -6,6 +6,8 @@ import { Context } from './ContextAPI/CreateContext'
 import Rellax from "rellax";
 import Lenis from 'lenis';
 import React, { useEffect, useRef } from 'react';
+import About from './pages/About'
+import Artwork from './pages/Artwork'
 function App() {
   useEffect(() => {
     const rellax = new Rellax('.rellax', {
@@ -46,6 +48,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Layout/>}>
             <Route index element={<Home/>}/>
+            <Route path='/about' element={<About/>}/>
+            <Route path='/artwork' element={<Artwork/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

@@ -52,20 +52,13 @@ const ResNavbar = () => {
             <span className="text-sm">4 </span>ARTWORK
           </NavLink>
         </div>
-        <div className="flex justify-between gap-3 items-center pb-10">
-          <NavLink
-            onMouseEnter={() => handleHover("bg-purple-500")}
-            onMouseLeave={handleLeave}
-            className="text-3xl lg:text-9xl text-transparent hover:text-white transition-colors duration-500 font-Aboreto outline-text"
-          >
-            <span className="text-sm">5 </span>GALLERY
-          </NavLink>
+        <div className="flex justify-between items-center pb-10">
           <NavLink
             onMouseEnter={() => handleHover("bg-pink-500")}
             onMouseLeave={handleLeave}
-            className="text-3xl lg:text-9xl text-transparent hover:text-white transition-colors duration-500 font-serif outline-text"
+            className="text-3xl lg:text-9xl text-transparent hover:text-white transition-colors duration-500 font-Aboreto outline-text"
           >
-            <span className="text-sm">6 </span>CONTACT
+            <span className="text-sm">5</span>CONTACT
           </NavLink>
         </div>
       </div>
