@@ -1,5 +1,8 @@
 import { createContext, useState } from "react";
-
+import {FaWhatsapp} from "react-icons/fa"
+import { FaFacebookF ,FaInstagram } from "react-icons/fa";
+import {GrPinterest} from "react-icons/gr"
+import { useEffect } from "react";
 export const ContextProvide = createContext();
 
 export const Context = ({children})=>{
@@ -70,7 +73,7 @@ export const Context = ({children})=>{
     
    
     return(
-        <ContextProvide.Provider value={{menu,setMenu,cursorvariant,setCursorvariant,cursorEnter,cursorLeave,navlinks}}>
+        <ContextProvide.Provider value={{menu,setMenu,cursorvariant,setCursorvariant,cursorEnter,cursorLeave,navlinks,address,sitedetails,socialmedia}}>
             {children}
         </ContextProvide.Provider>
     )
