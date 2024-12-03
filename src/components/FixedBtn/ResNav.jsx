@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import { ContextProvide } from "../../ContextAPI/CreateContext";
 import { NavLink } from "react-router-dom";
 import { TfiUser } from "react-icons/tfi";
+import { Link, Route,Routes, useNavigate } from 'react-router-dom';
+
 const ResNavbar = () => {
   const { menu } = useContext(ContextProvide);
 
@@ -72,7 +74,7 @@ const ResNavbar = () => {
       </div>
       <div className="bg-gray-400 h-screen w-[1px] hidden lg:block"></div>
       <div className="text-white w-[80px] flex">
-        <div className="mx-auto"><TfiUser size={30} /></div>
+        <Link to={'/admin'}><div className="mx-auto"><TfiUser size={30} /></div></Link>
       </div>
     </div>
   );

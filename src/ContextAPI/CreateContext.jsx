@@ -1,5 +1,5 @@
-import { createContext, useState } from "react";
-
+import { createContext, useState,useEffect } from "react";
+import axios from "axios";
 export const ContextProvide = createContext();
 
 export const Context = ({children})=>{
@@ -19,8 +19,39 @@ export const Context = ({children})=>{
     const cursorLeave = ()=>{
         setCursorvariant('default');
     }
+
+
+    const [images,setImages]=useState([])
+    const [videos,setVideos]=useState([])
+    useEffect(()=>{
+        const fetchItems = async () => {
+          try {
+            const response = await axios.get(`http://localhost:3001/artwork`);
+           
+            if (response.data==null) {throw Error("Items not found")};
+            setImages(response.data.categories)
+          } catch (err) {
+            console.log(err.message)
+          }
+        };
+        fetchItems();
+        
+        const fetchVideos = async () => {
+            try {
+              const response = await axios.get(`http://localhost:3001/artWorkVideos`);
+              if (response.data==null) {throw Error("Items not found")};
+              setVideos(response.data.categories)
+            } catch (err) {
+              console.log(err.message)
+            }
+          };
+          fetchVideos();
+    
+      },[])
+    
+   
     return(
-        <ContextProvide.Provider value={{menu,setMenu,cursorvariant,setCursorvariant,cursorEnter,cursorLeave,navlinks}}>
+        <ContextProvide.Provider value={{menu,setMenu,cursorvariant,setCursorvariant,cursorEnter,cursorLeave,navlinks,images,setImages,videos,setVideos}}>
             {children}
         </ContextProvide.Provider>
     )

@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily:{
+        "Roboto":['Roboto'],
         "TimesNewRoman": ['"Times New Roman"', 'serif'],
         "Aboreto": ['Aboreto', 'serif'],
         "Spectral": ['Spectral', 'serif'],
