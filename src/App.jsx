@@ -6,7 +6,7 @@ import Layout from "./pages/Layout";
 import { Context } from "./ContextAPI/CreateContext";
 import Rellax from "rellax";
 import Lenis from 'lenis';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 function App() {
   useEffect(() => {
     const rellax = new Rellax(".rellax", {
