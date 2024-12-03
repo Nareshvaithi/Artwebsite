@@ -1,5 +1,11 @@
-*{
-    cursor: none;
-    background-color: white;
+
+.herobanner{
+    background-image: url('./assets/home/lionBanner.jpg');
 }
 
+/* Add this to your main CSS file */
+.outline-text {
+    -webkit-text-stroke: 0.3px white; /* Add the stroke */
+    /* Transparent text fill */
+  }
+  
