@@ -73,7 +73,17 @@ export const Context = ({children})=>{
     
    
     return(
-        <ContextProvide.Provider value={{menu,setMenu,cursorvariant,setCursorvariant,cursorEnter,cursorLeave,navlinks,address,sitedetails,socialmedia}}>
+        <ContextProvide.Provider value={{
+            menu,setMenu,
+            cursorvariant,setCursorvariant,
+            cursorEnter,cursorLeave,
+            navlinks,
+            address,
+            sitedetails,
+            socialmedia,
+            images,
+            videos
+            }}>
             {children}
         </ContextProvide.Provider>
     )
