@@ -1,4 +1,4 @@
-import { createContext, useState,useEffect } from "react";
+import { createContext, useState } from "react";
 
 export const ContextProvide = createContext();
 
@@ -11,10 +11,10 @@ export const Context = ({children})=>{
         {id:6,title:'Contact',to:'/contact',color:'text-purple-500'},
     ]
     const socialmedia = [
-        // {id:1,name:'whatsapp',icon:<FaWhatsapp size={20}/>,link:""},
-        // {id:2,name:'facebook',icon:<FaFacebookF size={20}/>,link:""},
-        // {id:3,name:'pinterest',icon:<GrPinterest size={20}/>,link:""},
-        // {id:4,name:'instagram',icon:<FaInstagram size={20}/>,link:""},
+        {id:1,name:'whatsapp',icon:<FaWhatsapp size={20}/>,link:""},
+        {id:2,name:'facebook',icon:<FaFacebookF size={20}/>,link:""},
+        {id:3,name:'pinterest',icon:<GrPinterest size={20}/>,link:""},
+        {id:4,name:'instagram',icon:<FaInstagram size={20}/>,link:""},
     ]
 
     const address = [
@@ -70,7 +70,7 @@ export const Context = ({children})=>{
     
    
     return(
-        <ContextProvide.Provider value={{menu,setMenu,cursorvariant,setCursorvariant,cursorEnter,cursorLeave,navlinks}}>
+        <ContextProvide.Provider value={{menu,setMenu,cursorvariant,setCursorvariant,cursorEnter,cursorLeave,navlinks,address,sitedetails,socialmedia}}>
             {children}
         </ContextProvide.Provider>
     )
