@@ -2,6 +2,7 @@ import { createContext, useState } from "react";
 import {FaWhatsapp,FaFacebookF,FaInstagram} from "react-icons/fa";
 import {GrPinterest} from "react-icons/gr";
 import { useEffect } from "react";
+import axios from "axios"
 export const ContextProvide = createContext();
 
 export const Context = ({children})=>{
@@ -50,7 +51,7 @@ export const Context = ({children})=>{
             const response = await axios.get(`http://localhost:3001/artwork`);
            
             if (response.data==null) {throw Error("Items not found")};
-            setImages(response.data.categories)
+            setImages(response.data)
           } catch (err) {
             console.log(err.message)
           }
@@ -61,7 +62,7 @@ export const Context = ({children})=>{
             try {
               const response = await axios.get(`http://localhost:3001/artWorkVideos`);
               if (response.data==null) {throw Error("Items not found")};
-              setVideos(response.data.categories)
+              setVideos(response.data)
             } catch (err) {
               console.log(err.message)
             }
