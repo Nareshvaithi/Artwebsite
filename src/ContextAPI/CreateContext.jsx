@@ -2,16 +2,18 @@ import { createContext, useState } from "react";
 import {FaWhatsapp,FaFacebookF,FaInstagram} from "react-icons/fa";
 import {GrPinterest} from "react-icons/gr";
 import { useEffect } from "react";
+import axios from "axios"
 export const ContextProvide = createContext();
-import axios from "axios";
+
 
 export const Context = ({children})=>{
     const navlinks = [
         {id:1,title:'Home',to:'/',color:'text-red-500'},
         {id:2,title:'About',to:'/about',color:'text-blue-500'},
-        {id:4,title:'Artist',to:'/artist',color:'text-blue-orange'},
+        {id:4,title:'Artist',to:'/artist',color:'text-orange-500'},
         {id:5,title:'Artwork',to:'/artwork',color:'text-green-500'},
-        {id:6,title:'Contact',to:'/contact',color:'text-purple-500'},
+        {id:6,title:'Shorts',to:'/shorts',color:'text-yellow-500'},
+        {id:7,title:'Contact',to:'/contact',color:'text-purple-500'},
     ]
     const socialmedia = [
         {id:1,name:'whatsapp',icon:<FaWhatsapp size={20}/>,link:""},
@@ -53,7 +55,10 @@ export const Context = ({children})=>{
            
             if (response.data==null) {throw Error("Items not found")};
             setImages(response.data)
+// <<<<<<< HEAD
             
+// =======
+// >>>>>>> refs/remotes/origin/main
           } catch (err) {
             console.log(err.message)
           }

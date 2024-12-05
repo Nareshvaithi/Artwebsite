@@ -51,8 +51,8 @@ const Hero = () => {
                     <div data-rellax-mobile-speed="2" data-rellax-speed="3" className="rellax group bg-transparent border border-gray-400 hover:border-purple-400 rounded-full px-1 py-12 lg:py-16 h-fit w-fit mx-auto">
                         <NavLink onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} className={"bg-gray-100 group-hover:text-purple-400 px-4 py-12 lg:py-16 rounded-full text-lg lg:text-2xl font-Aboreto"}>Contact</NavLink>
                     </div>
-                    <div data-rellax-mobile-speed="2" data-rellax-speed="3" className="rellax group bg-transparent border border-gray-400 hover:border-purple-400 rounded-full px-1 py-12 lg:py-16 h-fit w-fit mx-auto">
-                        <NavLink onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} className={"bg-gray-100 group-hover:text-purple-400 px-10 py-14 lg:py-16 rounded-full text-lg lg:text-2xl font-Aboreto"}>Home</NavLink>
+                    <div data-rellax-mobile-speed="2" data-rellax-speed="3" className="rellax group bg-transparent border border-gray-400 hover:border-yellow-400 rounded-full px-1 py-12 lg:py-16 h-fit w-fit mx-auto">
+                        <NavLink onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} className={"bg-gray-100 group-hover:text-yellow-400 px-8 py-14 lg:py-16 rounded-full text-lg lg:text-2xl font-Aboreto"}>Shorts</NavLink>
                     </div>
                 </div>
             </div>
