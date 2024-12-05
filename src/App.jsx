@@ -12,6 +12,9 @@ import ArtworkID from "./pages/ArtworkID";
 import 'aos/dist/aos.css';
 import AOS from "aos";
 import Contact from "./pages/Contact";
+import About from "./pages/About";
+import Artist from "./pages/Artist";
+import Shorts from "./pages/Shorts";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -62,6 +65,9 @@ function App() {
             <Route index element={<Home/>}/>
             <Route path="/artwork" element={<Artwork/>}/>
             <Route path="/artwork/:id" element={<ArtworkID/>}/>
+            <Route path="/about" element={<About/>}/>
+            <Route path="/artist" element={<Artist/>}/>
+            <Route path="/shorts"  element={<Shorts/>}/>
             <Route path="/contact" element={<Contact/>}/>
           </Route>
           <Route path="/admin" element={<Admin/>}/>

@@ -18,7 +18,7 @@ const Footer = ()=>{
                     <div className="flex gap-2 lg:gap-10">
                         {
                             navlinks.map(({id,title,to,color})=>(
-                                <NavLink onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} key={id} to={to} className={`text-sm lg:text-xl font-Aboreto`}>{title}</NavLink>
+                                <NavLink onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} key={id} to={to} className={`text-[13px] lg:text-xl font-Aboreto`}>{title}</NavLink>
                             ))
                         }
                     </div>

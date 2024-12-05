@@ -9,9 +9,10 @@ export const Context = ({children})=>{
     const navlinks = [
         {id:1,title:'Home',to:'/',color:'text-red-500'},
         {id:2,title:'About',to:'/about',color:'text-blue-500'},
-        {id:4,title:'Artist',to:'/artist',color:'text-blue-orange'},
+        {id:4,title:'Artist',to:'/artist',color:'text-orange-500'},
         {id:5,title:'Artwork',to:'/artwork',color:'text-green-500'},
-        {id:6,title:'Contact',to:'/contact',color:'text-purple-500'},
+        {id:6,title:'Shorts',to:'/shorts',color:'text-yellow-500'},
+        {id:7,title:'Contact',to:'/contact',color:'text-purple-500'},
     ]
     const socialmedia = [
         {id:1,name:'whatsapp',icon:<FaWhatsapp size={20}/>,link:""},
