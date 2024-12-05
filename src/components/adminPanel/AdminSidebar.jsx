@@ -18,6 +18,7 @@ import { ContextProvide } from "../../ContextAPI/CreateContext";
 
 function AdminSidebar() {
   const {addButton,setAddButton}=useContext(ContextProvide);
+  const {uploadForm,setUploadForm}=useContext(ContextProvide);
       const [display, setDisplay] = useState(false);
       const [route, setRoute] = useState("home");
     
@@ -54,7 +55,9 @@ function AdminSidebar() {
                               className="mt-2 py-2 hover:bg-[#009a8a] px-2 "
                               onClick={() => {
                                 setRoute("images")
-                                setAddButton(true)}}
+                                setAddButton(true)
+                                setUploadForm('images')
+                              }}
                             >
                               Images
                             </li></Link>
@@ -62,7 +65,9 @@ function AdminSidebar() {
                               className="mt-2 py-2 hover:bg-[#009a8a] px-2 "
                               onClick={() => {
                                 setRoute("videos")
-                                setAddButton(true)}
+                                setAddButton(true)
+                                setUploadForm('videos')
+                              }
                               }
                             >
                               Shorts

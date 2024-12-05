@@ -49,6 +49,8 @@ export const Context = ({children})=>{
     const [images,setImages]=useState([])
     const [videos,setVideos]=useState([])
     const [display, setDisplay] = useState(false);
+    const [uploadForm,setUploadForm]=useState('')
+
     useEffect(()=>{
         const fetchItems = async () => {
           try {
@@ -89,7 +91,8 @@ export const Context = ({children})=>{
             images,setImages,
             videos,setVideos,
             display,setDisplay,
-            addButton,setAddButton
+            addButton,setAddButton,
+            uploadForm,setUploadForm
             }}>
             {children}
         </ContextProvide.Provider>

@@ -19,6 +19,7 @@ import AdminLayout from "./pages/AdminLayout";
 import AdminHome from "./components/adminPanel/AdminHome";
 import ImagesAdmin from "./components/adminPanel/ImagesAdmin";
 import VideosAdmin from "./components/adminPanel/VideosAdmin";
+import ContactAdmin from "./components/adminPanel/ContactAdmin";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -78,6 +79,7 @@ function App() {
           <Route index element={<AdminHome/>}/>
           <Route path="/admin/ImagesAdmin" element={<ImagesAdmin/>}/>
           <Route path="/admin/VideosAdmin" element={<VideosAdmin/>}/>
+          <Route path="/admin/ContactAdmin" element={<ContactAdmin/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

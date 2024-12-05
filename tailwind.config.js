@@ -11,6 +11,7 @@ export default {
         "TimesNewRoman": ['"Times New Roman"', 'serif'],
         "Aboreto": ['Aboreto', 'serif'],
         "Spectral": ['Spectral', 'serif'],
+        "MonaSans":["Mona Sans,sans-serif"]
 
       },
       keyframes: {
