@@ -60,7 +60,6 @@ const ArtworkID = () => {
     return (
         <div
             key={_id} // Force re-render for AOS animations
-            data-aos="zoom-in"
             className="w-full h-auto py-20 lg:py-10 px-3 lg:px-10 flex flex-col lg:flex-row items-center justify-center lg:justify-between"
         >
             <div
@@ -73,7 +72,7 @@ const ArtworkID = () => {
                 <h1 className="transform -rotate-90"><GoArrowUp /></h1>
                 <h1>Artwork</h1>
             </div>
-            <div className="w-10/12 flex flex-col-reverse lg:flex-row items-center gap-5">
+            <div data-aos="zoom-in" className="w-10/12 flex flex-col-reverse lg:flex-row items-center gap-5">
                 <div className="w-full">
                     <div className="border-b py-5 border-gray-400 font-Aboreto">
                         <h1 className="text-lg lg:text-2xl">{main_title}</h1>
