@@ -30,33 +30,19 @@ function ImagesAdmin() {
   };
 
   const handleDelete = async (id) => {
-    try {
-      await axios.delete("http://localhost:3001/artwork/" + id);
-      alert("Image Delete Successfully");
-      fetchItems();
-    } catch (err) {
-      console.log(err.message);
+    const isDelete=window.confirm('Are You Sure You Want to Delete this Art?')
+    if(isDelete){
+      try {
+        await axios.delete("http://localhost:3001/artwork/" + id);
+        alert("Image Delete Successfully");
+        fetchItems();
+      } catch (err) {
+        console.log(err.message);
+      }
+    };
     }
-  };
 
-  // const handleEdit = async (id) => {
-  //   try {
-  //     await axios.delete("http://localhost:3001/artwork/" + id);
-  //     alert("Image Delete Successfully");
-  //     fetchItems();
-  //   } catch (err) {
-  //     console.log(err.message);
-  //   }
-  // };
-
-  const handleSubmit = async () => {
-    try {
-      await axios.post("http://localhost:3001/artwork/", values);
-      fetchItems();
-    } catch (err) {
-      console.log(err.message);
-    }
-  };
+ 
   return (
     <>
     

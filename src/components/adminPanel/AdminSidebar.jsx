@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useContext} from "react";
 import { RxHome } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import { GrUserAdmin } from "react-icons/gr";
@@ -11,8 +11,13 @@ import ImagesAdmin from "./ImagesAdmin";
 import VideosAdmin from "./VideosAdmin";
 import ContactAdmin from "./ContactAdmin";
 import { TfiDashboard } from "react-icons/tfi";
+import { ContextProvide } from "../../ContextAPI/CreateContext";
+
+
+
 
 function AdminSidebar() {
+  const {addButton,setAddButton}=useContext(ContextProvide);
       const [display, setDisplay] = useState(false);
       const [route, setRoute] = useState("home");
     
@@ -29,7 +34,7 @@ function AdminSidebar() {
                       className="flex  items-center gap-4 text-lg hover:bg-[#009a8a] py-2 px-4"
                     >
                       <RiHomeWifiLine />
-                      <Link to={'/admin'}><p>Home</p></Link>
+                      <Link to={'/admin'}><p onClick={()=>setAddButton(false)}>Home</p></Link>
                     </li>
                     <li
                       className=" mt-4"
@@ -47,13 +52,18 @@ function AdminSidebar() {
                           <ul className="px-4">
                             <Link to={'/admin/ImagesAdmin'}><li
                               className="mt-2 py-2 hover:bg-[#009a8a] px-2 "
-                              onClick={() => setRoute("images")}
+                              onClick={() => {
+                                setRoute("images")
+                                setAddButton(true)}}
                             >
                               Images
                             </li></Link>
                             <Link to={'/admin/VideosAdmin'}><li
                               className="mt-2 py-2 hover:bg-[#009a8a] px-2 "
-                              onClick={() => setRoute("videos")}
+                              onClick={() => {
+                                setRoute("videos")
+                                setAddButton(true)}
+                              }
                             >
                               Shorts
                             </li>
