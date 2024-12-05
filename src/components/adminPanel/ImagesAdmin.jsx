@@ -46,7 +46,7 @@ function ImagesAdmin() {
   return (
     <>
     
-      <div className="grid grid-cols-5 pl-60 py-40 ">
+      <div className="grid grid-cols-5 pl-60 py-40">
         {images.map((value, index) => {
           return (
             <>

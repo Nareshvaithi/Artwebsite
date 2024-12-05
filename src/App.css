@@ -5,7 +5,7 @@
 
 /* Add this to your main CSS file */
 .outline-text {
-    -webkit-text-stroke: 0.3px white; /* Add the stroke */
+    -webkit-text-stroke: 1px white; /* Add the stroke */
     /* Transparent text fill */
   }
   
