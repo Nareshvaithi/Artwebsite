@@ -3,6 +3,7 @@ import {FaWhatsapp,FaFacebookF,FaInstagram} from "react-icons/fa";
 import {GrPinterest} from "react-icons/gr";
 import { useEffect } from "react";
 export const ContextProvide = createContext();
+import axios from "axios";
 
 export const Context = ({children})=>{
     const navlinks = [
@@ -44,13 +45,15 @@ export const Context = ({children})=>{
 
     const [images,setImages]=useState([])
     const [videos,setVideos]=useState([])
+    const [display, setDisplay] = useState(false);
     useEffect(()=>{
         const fetchItems = async () => {
           try {
             const response = await axios.get(`http://localhost:3001/artwork`);
            
             if (response.data==null) {throw Error("Items not found")};
-            setImages(response.data.categories)
+            setImages(response.data)
+            
           } catch (err) {
             console.log(err.message)
           }
@@ -61,7 +64,7 @@ export const Context = ({children})=>{
             try {
               const response = await axios.get(`http://localhost:3001/artWorkVideos`);
               if (response.data==null) {throw Error("Items not found")};
-              setVideos(response.data.categories)
+              setVideos(response.data)
             } catch (err) {
               console.log(err.message)
             }
@@ -69,7 +72,7 @@ export const Context = ({children})=>{
           fetchVideos();
     
       },[])
-    
+      console.log(videos)
    
     return(
         <ContextProvide.Provider value={{
@@ -81,7 +84,11 @@ export const Context = ({children})=>{
             sitedetails,
             socialmedia,
             images,
-            videos
+            setImages,
+            videos,
+            setVideos,
+            display, 
+            setDisplay
             }}>
             {children}
         </ContextProvide.Provider>

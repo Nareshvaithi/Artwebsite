@@ -7,6 +7,15 @@ import { Context } from "./ContextAPI/CreateContext";
 import Rellax from "rellax";
 import Lenis from 'lenis';
 import React, { useEffect } from 'react';
+import Admin from "./components/adminPanel/admin";
+import AdminLayout from "./pages/AdminLayout";
+import AdminHome from "./components/adminPanel/AdminHome";
+import ImagesAdmin from "./components/adminPanel/ImagesAdmin";
+import VideosAdmin from "./components/adminPanel/VideosAdmin";
+import ContactAdmin from "./components/adminPanel/ContactAdmin";
+import UploadFiles from "./components/adminPanel/UploadFiles";
+import EditFiles from "./components/adminPanel/EditFiles";
+
 function App() {
   useEffect(() => {
     const rellax = new Rellax(".rellax", {
@@ -46,6 +55,15 @@ function App() {
           <Route path='/' element={<Layout/>}>
             <Route index element={<Home/>}/>
           </Route>
+          <Route path="/admin" element={<AdminLayout/>} >
+          <Route index element={<AdminHome/>}/>
+          <Route path='/admin/ImagesAdmin' element={<ImagesAdmin/>}/>
+          <Route path="/admin/VideosAdmin" element={<VideosAdmin/>}/>
+          <Route path="/admin/ContactAdmin" element={<ContactAdmin/>}/>
+          <Route path="/admin/UploadFiles" element={<UploadFiles/>}/>
+          <Route path="/admin/edit/:id" element={<EditFiles/>}/>
+          </Route>
+
         </Routes>
       </BrowserRouter>
     </Context>
