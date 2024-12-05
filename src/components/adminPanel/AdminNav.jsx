@@ -16,6 +16,7 @@ import { ContextProvide } from "../../ContextAPI/CreateContext";
 
 function AdminNav() {
   const {display,setDisplay}=useContext(ContextProvide);
+  const {addButton,setAddButton}=useContext(ContextProvide);
 
   return (
     <>
@@ -53,7 +54,7 @@ function AdminNav() {
               </div>
             </div>
             <div>
-              <p onClick={()=>setDisplay(true)}  className="py-2 px-6 rounded-xl bg-[#4eb19d] text-center text-white">
+              <p onClick={()=>setDisplay(true)}  className={`${addButton ? "block": "hidden"} py-2 px-6 rounded-xl bg-[#4eb19d] text-center text-white`}>
                 +Add
               </p>
             </div>

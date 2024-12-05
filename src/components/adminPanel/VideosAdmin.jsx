@@ -37,30 +37,11 @@ function VideosAdmin() {
       console.log(err.message);
     }
   };
-
-  // const handleEdit = async (id) => {
-  //   try {
-  //     await axios.delete("http://localhost:3001/artwork/" + id);
-  //     alert("Image Delete Successfully");
-  //     fetchItems();
-  //   } catch (err) {
-  //     console.log(err.message);
-  //   }
-  // };
-
-  const handleSubmit = async () => {
-    try {
-      await axios.post("http://localhost:3001/artWorkVideos/", values);
-      fetchItems();
-    } catch (err) {
-      console.log(err.message);
-    }
-  };
   return (
     <>
       <div className="grid grid-cols-5 gap-10 pl-80 pr-20 py-40 ">
         {videos.map((value, index) => {
-          console.log(value.url);
+      
           return (
             <>
               <div className="relative mx-auto shadow-xl w-52 h-72   bg-gray-50 mt-10 border ">

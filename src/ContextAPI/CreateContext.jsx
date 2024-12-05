@@ -7,6 +7,7 @@ export const ContextProvide = createContext();
 
 
 export const Context = ({children})=>{
+  const [addButton,setAddButton]=useState(false)
     const navlinks = [
         {id:1,title:'Home',to:'/',color:'text-red-500'},
         {id:2,title:'About',to:'/about',color:'text-blue-500'},
@@ -55,10 +56,7 @@ export const Context = ({children})=>{
            
             if (response.data==null) {throw Error("Items not found")};
             setImages(response.data)
-// <<<<<<< HEAD
-            
-// =======
-// >>>>>>> refs/remotes/origin/main
+
           } catch (err) {
             console.log(err.message)
           }
@@ -77,7 +75,7 @@ export const Context = ({children})=>{
           fetchVideos();
     
       },[])
-      console.log(videos)
+ 
    
     return(
         <ContextProvide.Provider value={{
@@ -88,12 +86,10 @@ export const Context = ({children})=>{
             address,
             sitedetails,
             socialmedia,
-            images,
-            setImages,
-            videos,
-            setVideos,
-            display, 
-            setDisplay
+            images,setImages,
+            videos,setVideos,
+            display,setDisplay,
+            addButton,setAddButton
             }}>
             {children}
         </ContextProvide.Provider>
