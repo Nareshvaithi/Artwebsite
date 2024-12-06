@@ -82,7 +82,7 @@ const Contact = () => {
 
   return (
     <div
-      className="w-full h-auto bg-gray-200"
+      className="w-full h-auto"
       onMouseMove={handleMouseMove}
     >
       <div className="w-full h-full px-3 lg:px-10">

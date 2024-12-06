@@ -7,7 +7,7 @@ const Artwork = ()=>{
     console.log(images);
     const navigate = useNavigate()
     return(
-        <div className="w-full h-auto px-3 lg:px-10 py-32 bg-gray-200">
+        <div className="w-full h-auto px-3 lg:px-10 py-32">
             <div>
                 <div className="grid grid-cols-1 lg:grid-cols-3">
                   {

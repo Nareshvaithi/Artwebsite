@@ -24,6 +24,7 @@ const ResNavbar = () => {
       <div className={`${bgColor} transition-all duration-1000 px-0 lg:px-5`}>
         <div className="flex justify-between gap-5 items-center pb-10 lg:pb-20">
           <NavLink
+          to={'/'}
             onMouseEnter={() => handleHover("bg-red-500")}
             onMouseLeave={handleLeave}
             className="text-3xl lg:text-[160px] font-black text-transparent hover:text-white transition-colors duration-500 font-Roboto tracking-tighter outline-text"
@@ -31,6 +32,7 @@ const ResNavbar = () => {
             <span className="text-sm tracking-widest">1 </span>HOME
           </NavLink>
           <NavLink
+          to={'/artist'}
             onMouseEnter={() => handleHover("bg-green-500")}
             onMouseLeave={handleLeave}
             className="text-3xl lg:text-[160px] font-black text-transparent hover:text-white transition-colors duration-500 font-Roboto tracking-tighter outline-text"
@@ -40,6 +42,7 @@ const ResNavbar = () => {
         </div>
         <div className="flex justify-between gap-3 items-center pb-10 lg:pb-20">
           <NavLink
+          to={'/artwork'}
             onMouseEnter={() => handleHover("bg-yellow-500")}
             onMouseLeave={handleLeave}
             className="text-3xl lg:text-[120px] font-black text-transparent hover:text-white transition-colors duration-500 font-Roboto tracking-tighter outline-text"
@@ -47,6 +50,7 @@ const ResNavbar = () => {
             <span className="text-sm tracking-widest">4 </span>ARTWORK
           </NavLink>
           <NavLink
+          to={'/short'}
             onMouseEnter={() => handleHover("bg-yellow-500")}
             onMouseLeave={handleLeave}
             className="text-3xl lg:text-[120px] text-transparent font-black hover:text-white transition-colors duration-500 font-Roboto outline-text tracking-tighter"
@@ -56,6 +60,7 @@ const ResNavbar = () => {
         </div>
         <div className="flex justify-between items-center pb-10 lg:pb-20">
           <NavLink
+          to={'/contact'}
             onMouseEnter={() => handleHover("bg-pink-500")}
             onMouseLeave={handleLeave}
             className="text-3xl lg:text-[100px] text-transparent font-black hover:text-white transition-colors duration-500 font-Roboto outline-text tracking-tighter"
