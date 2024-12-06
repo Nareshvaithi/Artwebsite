@@ -82,21 +82,21 @@ const Contact = () => {
 
   return (
     <div
-      className="w-full h-auto"
+      className="w-full h-auto bg-gray-200"
       onMouseMove={handleMouseMove}
     >
       <div className="w-full h-full px-3 lg:px-10">
         {/* for window */}
         <div className="items-center justify-center w-full h-screen relative hidden lg:flex">
             <div className="flex flex-col justify-center items-center">
-                <div className="relative w-full text-[170px] text-gray-500 font-Roboto outline2-text text-center gap-4 font-bold flex">
-                    <h1 className="relative">UNLEASH</h1> <h1 className="relative -z-10">YOUR</h1>
+                <div className="relative w-full text-[170px] text-gray-500 font-Roboto outline2-text text-center font-bold flex justify-between">
+                    <h1 className="relative z-10">UNLEASH</h1> <h1 className="relative">YOUR</h1>
                 </div>
-                <div className="relative text-[170px] text-gray-400 font-Roboto outline2-text text-center font-bold flex gap-36">
-                    <h1 className="relative -z-10">INNER</h1> <h1 className="relative">ARTIST</h1>
+                <div className="relative text-[170px] text-gray-400 font-Roboto outline2-text text-center font-bold flex justify-between gap-36">
+                    <h1 className="relative">INNER</h1> <h1 className="relative z-10">ARTIST</h1>
                 </div>
             </div>
-          <div className="absolute -z-10 top-0 left-0 right-0 flex rotate-12">
+          <div className="absolute -top-10 left-0 right-0 flex rotate-12">
             <Canvas style={{ width: "100%", height: "100vh"}} className="my-auto mx-auto">
               <ambientLight />
               <pointLight position={[1, 1, 1]} />
@@ -127,7 +127,7 @@ const Contact = () => {
               <div className="py-5">
                 <p className="text-sm lg:text-lg">Address</p>
                 <div className="w-full h-[1px] bg-gray-500 my-2"></div>
-                <h1 className="text-2xl lg:text-4xl font-extralight leading-snug w-full lg:w-5/6">#11, My address, My state, My country - 10000</h1>
+                <h1 className="text-2xl lg:text-4xl font-extralight leading-snug w-full lg:w-5/6">#10, My address, My state, My country - 10000</h1>
               </div>
               <div className="py-5">
                 <p className="text-sm lg:text-lg">send an Email</p>

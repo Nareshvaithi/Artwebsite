@@ -9,7 +9,7 @@ const Footer = ()=>{
     const {sitedetails} = useContext(ContextProvide);
     const {cursorEnter,cursorLeave} = useContext(ContextProvide);
     return(
-        <div className="px-3 lg:px-10 bg-[#e0e0dd]">
+        <div className="px-3 lg:px-10 bg-gray-200">
             <div className="px-20 flex justify-center">
                 <nav className="flex gap-y-5 flex-col lg:flex-row justify-between items-center w-full py-5 lg:py-10">
                     <div className="">
@@ -30,7 +30,7 @@ const Footer = ()=>{
                     <div className="flex flex-wrap text-center items-center gap-2 lg:gap-10 font-Spectral text-lg">
                         {
                             address.map(({id,details,link})=>(
-                                <NavLink className={'w-full lg:w-fit text-sm lg:text-lg'} onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} key={id} onClick={()=>window.location.href = link}>{details}</NavLink>
+                                <NavLink className={'w-[300px] lg:w-fit text-sm lg:text-lg'} onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} key={id} onClick={()=>window.location.href = link}>{details}</NavLink>
                             ))
                         }
                     </div>
@@ -49,12 +49,12 @@ const Footer = ()=>{
                     <div className="flex flex-wrap text-center lg:text-left items-center gap-2 lg:gap-10 font-Spectral">
                         {
                             sitedetails.map(({id,details,link})=>(
-                                <NavLink className={'w-full lg:w-fit text-sm lg:text-lg'} onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} key={id} onClick={()=>window.location.href = link}>{details}</NavLink>
+                                <NavLink className={'w-[300px] lg:w-fit text-sm lg:text-lg'} onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} key={id} onClick={()=>window.location.href = link}>{details}</NavLink>
                             ))
                         }
                     </div>
-                    <div>
-                        <p className="text-center text-sm" onMouseEnter={cursorEnter} onMouseLeave={cursorLeave}>&copy; 2024 Augustine Samuel Gallery. All Rights Reserved</p>
+                    <div className="w-[300px] lg:w-fit">
+                        <p className="text-center text-sm" onMouseEnter={cursorEnter} onMouseLeave={cursorLeave}>&copy; 2024 Augustine Samuel Gallery <span className="block lg:inline">All Rights Reserved.</span></p>
                     </div>
                 </nav>
             </div>

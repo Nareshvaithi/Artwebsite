@@ -43,7 +43,7 @@ const Cursor = ()=>{
     } 
     const {cursorvariant} = useContext(ContextProvide)
     return(
-            <motion.div animate={cursorvariant} variants={variants} className="bg-transparent h-[20px] w-[20px] rounded-full border border-black fixed top-0 left-0 z-[9999999] pointer-events-none"></motion.div>
+            <motion.div animate={cursorvariant} variants={variants} className="bg-transparent h-[20px] w-[20px] rounded-full border border-black fixed top-0 left-0 z-[9999999] pointer-events-none hidden lg:block"></motion.div>
     )
 }
 

@@ -23,9 +23,9 @@ export const Context = ({children})=>{
     ]
 
     const address = [
-        {id:1,details:'#11,Selva nagar puducherry - 605002',link:""},
-        {id:1,details:'nareshvaithi4@gmail.com',link:'mailto:nareshvaithi4@gmail.com'},
-        {id:1,details:'+91 95009 19327',link:'tel:91+9500919327'},
+        {id:1,details:'#10, My address, My state, My country - 10000',link:""},
+        {id:1,details:'example@gmail.com',link:'mailto:example@gmail@gmail.com'},
+        {id:1,details:'+91 95009 19327',link:'tel:91+12345 12345'},
     ]
 
     const sitedetails = [

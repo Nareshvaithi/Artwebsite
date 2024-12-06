@@ -1,9 +1,9 @@
-const About = ()=>{
+const Shorts = ()=>{
     return(
         <div>
-            About
+            shorts
         </div>
     )
 }
 
-export default About;
+export default Shorts;
