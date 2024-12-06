@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import { motion } from "framer-motion";
 import { ContextProvide } from "../../ContextAPI/CreateContext";
-import { text } from "framer-motion/client";
+import { div, text } from "framer-motion/client";
 const Cursor = ()=>{
     const [mousePosition,setMousePosition] = useState({
         x:0,
@@ -27,7 +27,6 @@ const Cursor = ()=>{
         default:{
             x:mousePosition.x-10,
             y:mousePosition.y-10,
-            // backgroundColor:"black"
         },
         text:{
             height:50,
@@ -39,9 +38,8 @@ const Cursor = ()=>{
         },
         transition:{
             type:'smooth',
-            duration:0
-        }
-
+            duration:0,
+        },
     } 
     const {cursorvariant} = useContext(ContextProvide)
     return(
@@ -49,4 +47,4 @@ const Cursor = ()=>{
     )
 }
 
-export default Cursor
+export default Cursor;

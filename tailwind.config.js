@@ -6,34 +6,44 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily:{
-        "Roboto":['Roboto'],
+      fontFamily: {
+        "Roboto": ['Roboto'],
         "TimesNewRoman": ['"Times New Roman"', 'serif'],
         "Aboreto": ['Aboreto', 'serif'],
         "Spectral": ['Spectral', 'serif'],
-
       },
       keyframes: {
+        float: {
+          '0%': { transform: 'translateY(0)', opacity: '1' },
+          '50%': { transform: 'translateY(-20px)', opacity: '0.8' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        drift: {
+          '0%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translatey(10px)' },
+          '100%': { transform: 'translateX(0)' },
+        },
         backgroundCycle: {
-          '0%': { backgroundColor: '#D1C7B7' },  // Darker Ivory
-          '9%': { backgroundColor: '#F1A7C1' },  // Darker Pastel Pink
-          '18%': { backgroundColor: '#D49AB0' },  // Soft Rose
-          '27%': { backgroundColor: '#B2A7E1' },  // Darker Lavender
-          '36%': { backgroundColor: '#7CB9E8' },  // Darker Pastel Blue
-          '45%': { backgroundColor: '#6DD5B0' },  // Darker Mint Green
-          '54%': { backgroundColor: '#92D6A4' },  // Darker Pastel Green
-          '63%': { backgroundColor: '#F1D6A1' },  // Darker Pale Yellow
-          '72%': { backgroundColor: '#FFC3A0' },  // Soft Coral
-          '81%': { backgroundColor: '#F2B5D4' },  // Light Pinkish Lavender
-          '90%': { backgroundColor: '#D1A8D9' },  // Darker Pastel Lavender
-          '100%': { backgroundColor: '#E2C8ED' }, // Soft Pastel Lavender (back to start)
+          '0%': { backgroundColor: '#D1C7B7' },
+          '9%': { backgroundColor: '#F1A7C1' },
+          '18%': { backgroundColor: '#D49AB0' },
+          '27%': { backgroundColor: '#B2A7E1' },
+          '36%': { backgroundColor: '#7CB9E8' },
+          '45%': { backgroundColor: '#6DD5B0' },
+          '54%': { backgroundColor: '#92D6A4' },
+          '63%': { backgroundColor: '#F1D6A1' },
+          '72%': { backgroundColor: '#FFC3A0' },
+          '81%': { backgroundColor: '#F2B5D4' },
+          '90%': { backgroundColor: '#D1A8D9' },
+          '100%': { backgroundColor: '#E2C8ED' },
         },
       },
       animation: {
+        float: 'float 3s ease-in-out infinite',
+        drift: 'drift 2s ease-in-out infinite',
         backgroundCycle: 'backgroundCycle 10s infinite',
       },
     },
   },
   plugins: [],
-}
-
+};

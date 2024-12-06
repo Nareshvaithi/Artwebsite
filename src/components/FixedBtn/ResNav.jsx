@@ -20,7 +20,7 @@ const ResNavbar = () => {
         menu ? "opacity-100 visible" : "opacity-0 invisible"
       } transition-all duration-1000 flex flex-col lg:flex-row justify-center items-center`}
     >
-      <div className="w-11/12">
+      <div className="w-full">
       <div className={`${bgColor} transition-all duration-1000 px-0 lg:px-5`}>
         <div className="flex justify-between gap-5 items-center pb-10 lg:pb-20">
           <NavLink
@@ -29,13 +29,6 @@ const ResNavbar = () => {
             className="text-3xl lg:text-[160px] font-black text-transparent hover:text-white transition-colors duration-500 font-Roboto tracking-tighter outline-text"
           >
             <span className="text-sm tracking-widest">1 </span>HOME
-          </NavLink>
-          <NavLink
-            onMouseEnter={() => handleHover("bg-blue-500")}
-            onMouseLeave={handleLeave}
-            className="text-3xl lg:text-[160px] font-black text-transparent hover:text-white transition-colors duration-500 font-Roboto tracking-tighter outline-text"
-          >
-            <span className="text-sm tracking-widest">2 </span>ABOUT
           </NavLink>
         </div>
         <div className="flex justify-between gap-3 items-center pb-10 lg:pb-20">
@@ -73,8 +66,8 @@ const ResNavbar = () => {
       </div>
       </div>
       <div className="bg-gray-400 h-screen w-[1px] hidden lg:block"></div>
-      <div className="text-white w-1/12 flex flex-col justify-start items-center">
-        <div className="flex">
+      <div className="text-white w-[80px] h-full flex flex-col justify-start items-center">
+        <div className="flex w-full justify-center items-center h-full">
           <Link onClick={()=>window.scrollTo(0,0)} to={'/admin'}><TfiUser size={30} /></Link>
         </div>
       </div>
