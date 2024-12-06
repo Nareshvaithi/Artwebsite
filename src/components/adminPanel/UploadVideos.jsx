@@ -8,7 +8,7 @@ import axios from "axios";
 
 function UploadFiles() {
   const { display, setDisplay } = useContext(ContextProvide);
-  const { images, setImages } = useContext(ContextProvide);
+  const { videos, setVideos } = useContext(ContextProvide);
 
   const formik = useFormik({
     initialValues: {
@@ -43,32 +43,32 @@ function UploadFiles() {
       formData.append("sub_title", values.sub_title);
       formData.append("style", values.style);
       formData.append("year", values.year);
-      formData.append("url", values.file); // Add the file
+      formData.append("url", values.file); 
 
       try {
-        await axios.post("http://localhost:3001/artwork", formData, {
+        await axios.post("http://localhost:3001/artWorkVideos", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
         });
-        const response = await axios.get("http://localhost:3001/artwork");
+        const response = await axios.get("http://localhost:3001/artWorkVideos");
         if (response.data == null) {
           throw Error("Items not found");
         }
-        setImages(response.data);
+        setVideos(response.data);
       } catch (err) {
         console.log(err.message);
       }
       resetForm();
     },
   });
-
+console.log(videos)
   return (
     <>
       <section className={`h-auto flex items-center justify-center`}>
         <div className="bg-gray-100 flex rounded-2xl shadow-lg max-w-3xl p-5 items-center">
           <div className="md:w-1/2 px-8 md:px-16">
-            <h2 className="font-bold text-2xl text-[#002D74]">File Upload</h2>
+            <h2 className="font-bold text-2xl text-[#002D74]">Video Upload</h2>
 
             <form
               className="flex flex-col gap-4"
@@ -120,10 +120,13 @@ function UploadFiles() {
                 }}
                 value={formik.values.url}
               />
+              <span>video</span>
               <button
                 type="submit"
                 className="bg-[#002D74] rounded-xl text-white py-2 hover:scale-105 duration-300"
-                onClick={() => {setDisplay(false)}}
+                onClick={() => {
+                  alert("submit")
+                  setDisplay(false)}}
               >
                 Upload
               </button>

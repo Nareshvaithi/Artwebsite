@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useContext } from "react";
 import { ContextProvide } from "../../ContextAPI/CreateContext";
-import { FaTrashCanArrowUp } from "react-icons/fa6";
+import { FaTrash } from "react-icons/fa";
 import { LiaEdit } from "react-icons/lia";
 import axios from "axios";
 import UploadFiles from "./UploadFiles";
@@ -46,52 +46,45 @@ function ImagesAdmin() {
   return (
     <>
     
-      <div className="grid grid-cols-5 pl-60 py-40">
-        {images.map((value, index) => {
-          return (
-            <>
-              <div className="relative mx-auto">
-                <img
-                  onMouseEnter={() => handleDisplay(value._id)}
-                  className="w-5/12"
-                  key={index}
-                  src={`http://${value.url}`}
-                  alt={`Artwork ${index}`}
-                  style={{
-                    margin: "10px",
-                    width: "200px",
-                    height: "200px",
-                    objectFit: "cover",
-                  }}
-                />
-                <div className={`${id == value._id ? "block" : "hidden"}`}>
-                  <div className={`absolute bottom-5 left-5`}>
-                    <p className="text-2xl capitalize">{value.main_title}</p>
-                    <p className="text-sm">{value.sub_title}</p>
-                  </div>
-                  <div className="absolute top-6 left-40">
-                    <FaTrashCanArrowUp
-                      onClick={() => handleDelete(value._id)}
-                      className="text-2xl text-[#009a8a]"
-                    />
-                    <Link to={`/admin/edit/${value._id}`}>
-                    <LiaEdit
-                      
-                      className="text-2xl text-[#009a8a] mt-2"
-                    />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </>
-          );
-        })}
-    <div className={`${display ? "block" : "hidden" } fixed`}>
-      <UploadFiles />
-    </div>
+      <div className="grid grid-cols-5 pl-[270px] py-40">
+  {images.map((value, index) => {
+    return (
+      <div 
+        key={value._id} 
+        className="relative mx-auto w-52 h-52 overflow-hidden group" 
+        style={{ margin: "10px" }}
+      >
+        <img
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          src={`http://${value.url}`}
+          alt={`Artwork ${index}`}
+        />
 
-        
+        <div 
+          className="absolute bottom-5 left-5 text-zinc-950 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        >
+          <p className="text-2xl text-white capitalize font-MonaSans">{value.main_title}</p>
+          <p className="text-sm text-white font-MonaSans">{value.sub_title}</p>
+        </div>
+        <div 
+          className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        >
+          <FaTrash color="white" size={40}
+            onClick={() => handleDelete(value._id)}
+            className=" bg-[#009a8a] p-2  cursor-pointer rounded-3xl"
+          />
+          <Link to={`/admin/edit/${value._id}`}>
+            <LiaEdit color="white" size={40} className=" text-[#009a8a] mt-2 cursor-pointer" />
+          </Link>
+        </div>
       </div>
+    );
+  })}
+  <div className={`${display ? "block" : "hidden"} fixed`}>
+          <UploadFiles />
+        </div>
+</div>
+
     </>
   );
 }

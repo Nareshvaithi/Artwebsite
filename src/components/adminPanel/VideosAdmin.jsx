@@ -4,7 +4,7 @@ import { ContextProvide } from "../../ContextAPI/CreateContext";
 import { FaTrashCanArrowUp } from "react-icons/fa6";
 import { LiaEdit } from "react-icons/lia";
 import axios from "axios";
-import UploadFiles from "./UploadFiles";
+import UploadVideos from "./UploadVideos";
 import { Link } from "react-router-dom";
 
 function VideosAdmin() {
@@ -29,17 +29,20 @@ function VideosAdmin() {
   };
 
   const handleDelete = async (id) => {
-    try {
-      await axios.delete("http://localhost:3001/artWorkVideos/" + id);
-      alert("Image Delete Successfully");
-      fetchItems();
-    } catch (err) {
-      console.log(err.message);
+    const isDelete=window.confirm('Are You Sure You Want to Delete this Art?')
+    if(isDelete){
+      try {
+        await axios.delete("http://localhost:3001/artWorkVideos/" + id);
+        alert("Image Delete Successfully");
+        fetchItems();
+      } catch (err) {
+        console.log(err.message);
+      }
     }
   };
   return (
     <>
-      <div className="grid grid-cols-5 gap-10 pl-80 pr-20 py-40 ">
+      <div className="grid grid-cols-5 gap-14 pl-[300px] pr-20 py-40 ">
         {videos.map((value, index) => {
       
           return (
@@ -47,7 +50,7 @@ function VideosAdmin() {
               <div className="relative mx-auto shadow-xl w-52 h-72   bg-gray-50 mt-10 border ">
                 <video
                   onMouseEnter={() => handleDisplay(value._id)}
-                  className="w-full h-52 "
+                  className="w-full h-52 transition-transform duration-500 group-hover:scale-110"
                   key={index}
                   controls
                   poster
@@ -75,7 +78,7 @@ function VideosAdmin() {
           );
         })}
         <div className={`${display ? "block" : "hidden"} fixed`}>
-          <UploadFiles />
+          <UploadVideos />
         </div>
       </div>
     </>
