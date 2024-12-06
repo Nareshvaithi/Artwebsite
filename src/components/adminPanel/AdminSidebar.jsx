@@ -21,7 +21,7 @@ function AdminSidebar() {
   const {uploadForm,setUploadForm}=useContext(ContextProvide);
       const [display, setDisplay] = useState(false);
       const [route, setRoute] = useState("home");
-    
+      
       return (
         <>
     
@@ -32,7 +32,7 @@ function AdminSidebar() {
                   <ul className="text-[#9ca3a9] py-10 px-6">
                     <li
                       onClick={() => setRoute("home")}
-                      className="flex  items-center gap-4 text-lg hover:bg-[#009a8a] py-2 px-4"
+                      className={`${route=="home" ? "bg-[#009a8a]" : "" } flex  items-center gap-4 text-lg hover:bg-[#009a8a] py-2 px-4`}
                     >
                       <RiHomeWifiLine />
                       <Link to={'/admin'}><p onClick={()=>setAddButton(false)}>Home</p></Link>
@@ -43,7 +43,7 @@ function AdminSidebar() {
                       onMouseLeave={() => setDisplay(false)}
                     >
                       <div>
-                        <div className="flex items-center gap-4  text-lg hover:bg-[#009a8a] py-2 px-4">
+                        <div className={`${route=="images"||route=="videos" ? "bg-[#009a8a]" : "" } flex items-center gap-4  text-lg hover:bg-[#009a8a] py-2 px-4`}>
                           <BsSignIntersectionSide />
     
                           <p>Artwork</p>
@@ -52,7 +52,7 @@ function AdminSidebar() {
                         <div className={`${display ? "block" : "hidden"}`}>
                           <ul className="px-4">
                             <Link to={'/admin/ImagesAdmin'}><li
-                              className="mt-2 py-2 hover:bg-[#009a8a] px-2 "
+                              className={`${route=="images" ? "bg-[#009a8a]" : "" } mt-2 py-2 hover:bg-[#009a8a] px-2`} 
                               onClick={() => {
                                 setRoute("images")
                                 setAddButton(true)
@@ -62,7 +62,7 @@ function AdminSidebar() {
                               Images
                             </li></Link>
                             <Link to={'/admin/VideosAdmin'}><li
-                              className="mt-2 py-2 hover:bg-[#009a8a] px-2 "
+                              className={`${route=="videos" ? "bg-[#009a8a]" : "" } mt-2 py-2 hover:bg-[#009a8a] px-2`}
                               onClick={() => {
                                 setRoute("videos")
                                 setAddButton(true)
@@ -78,32 +78,23 @@ function AdminSidebar() {
                       </div>
                     </li>
                     <li
-                      onClick={() => setRoute("contact")}
-                      className="flex items-center gap-4  text-lg mt-4  hover:bg-[#009a8a] py-2 px-4"
+                      onClick={() => {
+                        setRoute("about")
+                        setAddButton(false)
+                      }
+                      }
+                      className={`${route=="about" ? "bg-[#009a8a]" : "" } flex items-center gap-4  text-lg mt-4  hover:bg-[#009a8a] py-2 px-4`}
                     >
                       <RiContactsLine />
     
-                      <Link to={'/admin/ContactAdmin'}><p>Contact</p></Link>
+                      <Link to={'/admin/ContactAdmin'}><p className={``}>About</p></Link>
                     </li>
                   </ul>
               
               </div>
     
     
-              {/* <div className="w-10/12 overflow-auto">
-               
-                <div className="py-20">
-                  {route == "images" ? (
-                    <ImagesAdmin />
-                  ) : route == "videos" ? (
-                    <VideosAdmin />
-                  ) : route == "contact" ? (
-                    <ContactAdmin />
-                  ) : (
-                    <AdminHome />
-                  )}
-                </div>
-              </div> */}
+             
             </div>
           </section>
         </>

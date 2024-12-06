@@ -60,7 +60,7 @@ function AdminNav() {
                 +Add
               </p>
               <p onClick={()=>setDisplay('videos')}  className={`${uploadForm=='videos' ? "block": "hidden"} py-2 px-6 rounded-xl bg-[#4eb19d] text-center text-white`}>
-                +Add+
+                +Add
               </p>
 
             </div>

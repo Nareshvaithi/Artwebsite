@@ -50,7 +50,7 @@ function VideosAdmin() {
               <div className="relative mx-auto shadow-xl w-52 h-72   bg-gray-50 mt-10 border ">
                 <video
                   onMouseEnter={() => handleDisplay(value._id)}
-                  className="w-full h-52 "
+                  className="w-full h-52 transition-transform duration-500 group-hover:scale-110"
                   key={index}
                   controls
                   poster
