@@ -24,6 +24,11 @@ export default {
           '50%': { transform: 'translatey(10px)' },
           '100%': { transform: 'translateX(0)' },
         },
+        drift2: {
+          '0%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translatey(10px)' },
+          '100%': { transform: 'translateX(0)' },
+        },
         backgroundCycle: {
           '0%': { backgroundColor: '#D1C7B7' },
           '9%': { backgroundColor: '#F1A7C1' },
@@ -41,7 +46,8 @@ export default {
       },
       animation: {
         float: 'float 3s ease-in-out infinite',
-        drift: 'drift 2s ease-in-out infinite',
+        drift: 'drift 3s ease-in-out infinite',
+        drift2: 'drift 5s ease-in-out infinite',
         backgroundCycle: 'backgroundCycle 10s infinite',
       },
     },

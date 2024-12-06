@@ -20,7 +20,7 @@ import AdminHome from "./components/adminPanel/AdminHome";
 import ImagesAdmin from "./components/adminPanel/ImagesAdmin";
 import VideosAdmin from "./components/adminPanel/VideosAdmin";
 import ContactAdmin from "./components/adminPanel/ContactAdmin";
-import AboutMain from "./components/about/AboutMain";
+
 function App() {
   useEffect(() => {
     AOS.init({
