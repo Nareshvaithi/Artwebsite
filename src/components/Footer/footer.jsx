@@ -9,16 +9,16 @@ const Footer = ()=>{
     const {sitedetails} = useContext(ContextProvide);
     const {cursorEnter,cursorLeave} = useContext(ContextProvide);
     return(
-        <div className="px-3 lg:px-10 bg-gray-200">
+        <div className="px-3 lg:px-10 bg-gray-100">
             <div className="px-20 flex justify-center">
                 <nav className="flex gap-y-5 flex-col lg:flex-row justify-between items-center w-full py-5 lg:py-10">
                     <div className="">
-                        <NavLink onMouseEnter={cursorEnter} onMouseLeave={cursorLeave}>Logo</NavLink>
+                        <NavLink onClick={()=>window.scrollTo(0,0)} onMouseEnter={cursorEnter} onMouseLeave={cursorLeave}>Logo</NavLink>
                     </div>
                     <div className="flex gap-2 lg:gap-10">
                         {
                             navlinks.map(({id,title,to,color})=>(
-                                <NavLink onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} key={id} to={to} className={`text-[13px] lg:text-xl font-Aboreto`}>{title}</NavLink>
+                                <NavLink onClick={()=>window.scrollTo(0,0)} onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} key={id} to={to} className={`text-[13px] lg:text-xl font-Aboreto`}>{title}</NavLink>
                             ))
                         }
                     </div>

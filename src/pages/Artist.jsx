@@ -14,7 +14,7 @@ import AboutArtist from "../components/about/AboutArtist";
 const Artist = () => {
   return (
     <>
-      <div className="relative flex items-center justify-center h-screen bg-[#f6f5f0] overflow-hidden">
+      <div className="relative flex items-center justify-center h-screen overflow-hidden">
         {/* Outer Circle */}
         <div className="relative w-[600px] h-[600px] lg:w-[1200px] lg:h-[1200px] border border-[#e2e7e8] rounded-full flex items-center  justify-center">
           {/* Circle 2 */}

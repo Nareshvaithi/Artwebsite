@@ -11,7 +11,7 @@ const Layout = ()=>{
             <Cursor />
             <Navbtn />
             <ResNavbar/>
-            <div className="z-[9999] bg-gray-200">
+            <div className="z-[9999] bg-gray-100">
                 <Outlet />
             </div>
             <Footer/>
