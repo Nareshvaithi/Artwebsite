@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { ContextProvide } from "../../ContextAPI/CreateContext";
-import {NavLink} from "react-router-dom"
+import {NavLink, useNavigate} from "react-router-dom"
 import Rellax from "rellax";
 import { useEffect } from "react";
 const Hero = () => {
     const { cursorEnter, cursorLeave } = useContext(ContextProvide) || {};
-
+    const navigate = useNavigate();
     useEffect(() => {
         const rellax = new Rellax('.rellax', {
       // Customize speed as needed
@@ -39,20 +39,20 @@ const Hero = () => {
                     </h1>
                 </div>
                 <div className="bg-transparent grid grid-cols-2 lg:grid-cols-2">
-                    <div data-rellax-mobile-speed="2" data-rellax-speed="3" className="rellax group bg-transparent border border-gray-400 hover:border-red-400 rounded-full px-2 py-12 lg:py-16 h-fit w-fit mx-auto">
-                        <NavLink onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} className={"bg-gray-100 group-hover:text-red-400 px-6 py-12 lg:py-14 rounded-full text-xl lg:text-3xl font-Aboreto"}>Home</NavLink>
+                    <div onClick={()=>navigate('/')} data-rellax-mobile-speed="2" data-rellax-speed="3" className="rellax group bg-transparent border border-gray-400 hover:border-red-400 rounded-full px-1 py-8 lg:py-16 h-fit w-fit mx-auto">
+                        <NavLink onClick={()=>navigate('/')} onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} className={"bg-gray-100 group-hover:text-red-400 px-4 lg:px-6 py-8 lg:py-14 rounded-full text-sm lg:text-3xl font-Aboreto"}>Home</NavLink>
                     </div>
-                    <div data-rellax-mobile-speed="2" data-rellax-speed="3" className="rellax group bg-transparent border border-gray-400 hover:border-green-400 rounded-full px-1 py-12 lg:py-16 h-fit w-fit mx-auto">
-                        <NavLink onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} className={"bg-gray-100 group-hover:text-green-400 px-6 py-12 lg:py-14 rounded-full text-xl lg:text-3xl font-Aboreto"}>Artist</NavLink>
+                    <div onClick={()=>navigate('/artist')} data-rellax-mobile-speed="2" data-rellax-speed="3" className="rellax group bg-transparent border border-gray-400 hover:border-green-400 rounded-full px-1 py-8 lg:py-16 h-fit w-fit mx-auto">
+                        <NavLink onClick={()=>navigate('/artist')} onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} className={"bg-gray-100 group-hover:text-green-400 px-4 px-5 py-8 lg:py-14 rounded-full text-sm lg:text-3xl font-Aboreto"}>Artist</NavLink>
                     </div>
-                    <div data-rellax-mobile-speed="2" data-rellax-speed="-1" className="rellax group bg-transparent border border-gray-400 hover:border-orange-400 rounded-full px-1 py-12 lg:py-20 h-fit w-fit col-span-2 mx-auto">
-                        <NavLink onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} className={"bg-gray-100 group-hover:text-orange-400 px-4 py-14 lg:py-20 rounded-full text-lg lg:text-3xl font-Aboreto"}>Artwork</NavLink>
+                    <div onClick={()=>navigate('/artwork')} data-rellax-mobile-speed="2" data-rellax-speed="-1" className="rellax group bg-transparent border border-gray-400 hover:border-orange-400 rounded-full px-1 py-10 lg:py-20 h-fit w-fit col-span-2 mx-auto">
+                        <NavLink onClick={()=>navigate('/artwork')} onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} className={"bg-gray-100 group-hover:text-orange-400 px-4 py-11 lg:py-20 rounded-full text-sm lg:text-3xl font-Aboreto"}>Artwork</NavLink>
                     </div>
-                    <div data-rellax-mobile-speed="2" data-rellax-speed="3" className="rellax group bg-transparent border border-gray-400 hover:border-purple-400 rounded-full px-1 py-12 lg:py-16 h-fit w-fit mx-auto">
-                        <NavLink onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} className={"bg-gray-100 group-hover:text-purple-400 px-4 py-12 lg:py-16 rounded-full text-lg lg:text-2xl font-Aboreto"}>Contact</NavLink>
+                    <div onClick={()=>navigate('/contact')} data-rellax-mobile-speed="2" data-rellax-speed="3" className="rellax group bg-transparent border border-gray-400 hover:border-purple-400 rounded-full px-1 py-12 lg:py-16 h-fit w-fit mx-auto">
+                        <NavLink onClick={()=>navigate('/contact')} onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} className={"bg-gray-100 group-hover:text-purple-400 px-4 py-12 lg:py-16 rounded-full text-sm lg:text-2xl font-Aboreto"}>Contact</NavLink>
                     </div>
-                    <div data-rellax-mobile-speed="2" data-rellax-speed="3" className="rellax group bg-transparent border border-gray-400 hover:border-yellow-400 rounded-full px-1 py-12 lg:py-16 h-fit w-fit mx-auto">
-                        <NavLink onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} className={"bg-gray-100 group-hover:text-yellow-400 px-8 py-14 lg:py-16 rounded-full text-lg lg:text-2xl font-Aboreto"}>Shorts</NavLink>
+                    <div onClick={()=>navigate('/shorts')} data-rellax-mobile-speed="2" data-rellax-speed="3" className="rellax group bg-transparent border border-gray-400 hover:border-yellow-400 rounded-full px-1 py-12 lg:py-16 h-fit w-fit mx-auto">
+                        <NavLink onClick={()=>navigate('/shorts')} onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} className={"bg-gray-100 group-hover:text-yellow-400 px-8 py-14 lg:py-16 rounded-full text-sm lg:text-2xl font-Aboreto"}>Shorts</NavLink>
                     </div>
                 </div>
             </div>

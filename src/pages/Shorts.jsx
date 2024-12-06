@@ -1,6 +1,6 @@
 const Shorts = ()=>{
     return(
-        <div>
+        <div className="pt-32">
             Shorts
         </div>
     )

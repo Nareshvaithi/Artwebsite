@@ -30,15 +30,15 @@ const ResNavbar = () => {
           >
             <span className="text-sm tracking-widest">1 </span>HOME
           </NavLink>
-        </div>
-        <div className="flex justify-between gap-3 items-center pb-10 lg:pb-20">
           <NavLink
             onMouseEnter={() => handleHover("bg-green-500")}
             onMouseLeave={handleLeave}
-            className="text-3xl lg:text-[120px] font-black text-transparent hover:text-white transition-colors duration-500 font-Roboto tracking-tighter outline-text"
+            className="text-3xl lg:text-[160px] font-black text-transparent hover:text-white transition-colors duration-500 font-Roboto tracking-tighter outline-text"
           >
             <span className="text-sm tracking-widest">3 </span>ARTIST
           </NavLink>
+        </div>
+        <div className="flex justify-between gap-3 items-center pb-10 lg:pb-20">
           <NavLink
             onMouseEnter={() => handleHover("bg-yellow-500")}
             onMouseLeave={handleLeave}
@@ -46,15 +46,15 @@ const ResNavbar = () => {
           >
             <span className="text-sm tracking-widest">4 </span>ARTWORK
           </NavLink>
-        </div>
-        <div className="flex justify-between items-center pb-10 lg:pb-20">
-        <NavLink
+          <NavLink
             onMouseEnter={() => handleHover("bg-yellow-500")}
             onMouseLeave={handleLeave}
-            className="text-3xl lg:text-[100px] text-transparent font-black hover:text-white transition-colors duration-500 font-Roboto outline-text tracking-tighter"
+            className="text-3xl lg:text-[120px] text-transparent font-black hover:text-white transition-colors duration-500 font-Roboto outline-text tracking-tighter"
           >
             <span className="text-sm tracking-widest">5 </span>SHORTS
           </NavLink>
+        </div>
+        <div className="flex justify-between items-center pb-10 lg:pb-20">
           <NavLink
             onMouseEnter={() => handleHover("bg-pink-500")}
             onMouseLeave={handleLeave}
