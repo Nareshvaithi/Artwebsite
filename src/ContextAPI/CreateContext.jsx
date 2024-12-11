@@ -53,7 +53,7 @@ export const Context = ({children})=>{
     useEffect(()=>{
         const fetchItems = async () => {
           try {
-            const response = await axios.get(`http://localhost:3001/artwork`);
+            const response = await axios.get(`https://augustinesamuelapi.konceptsdandd.com/artwork`);
            
             if (response.data==null) {throw Error("Items not found")};
             setImages(response.data)
@@ -66,7 +66,7 @@ export const Context = ({children})=>{
         
         const fetchVideos = async () => {
             try {
-              const response = await axios.get(`http://localhost:3001/artWorkVideos`);
+              const response = await axios.get(`https://augustinesamuelapi.konceptsdandd.com/artWorkVideos`);
               if (response.data==null) {throw Error("Items not found")};
               setVideos(response.data)
             } catch (err) {
