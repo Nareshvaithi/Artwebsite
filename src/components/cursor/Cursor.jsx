@@ -29,12 +29,11 @@ const Cursor = ()=>{
             y:mousePosition.y-10,
         },
         text:{
-            height:50,
-            width:50,
+            height:60,
+            width:60,
             x:mousePosition.x-35,
             y:mousePosition.y-35,
-            backgroundColor:"white",
-            mixBlendMode:"difference"
+            backgroundColor:"transparent",
         },
         transition:{
             type:'smooth',

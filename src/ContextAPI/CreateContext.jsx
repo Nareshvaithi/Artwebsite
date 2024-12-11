@@ -29,7 +29,7 @@ export const Context = ({children})=>{
     ]
 
     const sitedetails = [
-        {id:1,details:'subscribe to our Mailing List',link:''},
+        {id:1,details:'Subscribe to our Mailing List',link:''},
         {id:2,details:'Usage Rights',link:''},
         {id:3,details:'Accessiblity',link:''},
         {id:4,details:'Private Policy',link:''},
