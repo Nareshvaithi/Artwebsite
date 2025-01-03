@@ -11,8 +11,9 @@ const Artwork = ()=>{
             <div>
                 <div className="grid grid-cols-1 lg:grid-cols-3">
                   {
-                    images.map(({_id,url,main_title,sub_title,year,style},index)=>(
-                        <div 
+                    images.map(({_id,url,main_title,sub_title,year,style},index)=>{
+                        console.log(url)
+                       return <div 
                         onClick={() => {
                             navigate(`/artwork/${encodeURIComponent(main_title)}`, {state: {_id, main_title, url, sub_title, year, style,index}});
                             window.scrollTo(0,0);
@@ -23,7 +24,7 @@ const Artwork = ()=>{
                             <h1 className="text-2xl py-2 font-Aboreto">{main_title}</h1>
                             <p className="text-sm font-Aboreto">{sub_title}</p>
                         </div>
-                    ))
+})
                   }
                 </div>
             </div>
@@ -32,3 +33,4 @@ const Artwork = ()=>{
 }
 
 export default Artwork;
+
