@@ -24,8 +24,8 @@ export const Context = ({children})=>{
 
     const address = [
         {id:1,details:'#10, My address, My state, My country - 10000',link:""},
-        {id:1,details:'example@gmail.com',link:'mailto:example@gmail@gmail.com'},
-        {id:1,details:'+91 95009 19327',link:'tel:91+12345 12345'},
+        {id:1,details:'info@augustinesamuelgallery.com',link:'mailto:info@augustinesamuelgallery.com'},
+        {id:1,details:'+1 (650) 670-7666',link:'tel:1+6506707666'},
     ]
 
     const sitedetails = [
